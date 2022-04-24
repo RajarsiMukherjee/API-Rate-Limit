@@ -4,8 +4,8 @@ const posts = require('./posts');
 const rateLimit = require('express-rate-limit')
 
 const limiter = rateLimit({
-    max : 2,
-    windowMs: 10000
+    max : 10,
+    windowMs: 60000
 })
 
 app.get('/posts', limiter, (req, res) => {
